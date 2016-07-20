@@ -10,6 +10,7 @@ use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\math\Vector3;
 use pocketmorph\PocketMorph;
 use pocketmorph\morph\Morph;
+use pocketmine\player\Player;
 
 class EventListener implements Listener {
 	
@@ -25,7 +26,10 @@ class EventListener implements Listener {
 	
 	public function onDamage(EntityDamageEvent $event) {
 		if($event->getEntity() instanceof Morph) {
-			$event->setCancelled();
+			$event->setCancelled(true);
+			if($entity instanceof Player){
+				$event->setCancelled(false);
+			}
 		}
 	}
 	
