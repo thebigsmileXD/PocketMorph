@@ -68,6 +68,7 @@ class PocketMorph extends PluginBase {
         	Entity::registerEntity(MorphCaveSpider::class, true);
 
 		$this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
+		//$this->online = $online;
 	}
 	
 	public function onCommand(CommandSender $sender, Command $cmd, $label, array $args) {
@@ -80,6 +81,11 @@ class PocketMorph extends PluginBase {
 	public function getMorphManager() {		
 		return new MorphManager($this);
 	}
+	
+	/*public function onDisable(){
+		$this->online = $this->getServer()->getOnlinePlayers();
+		$this->getPlugin()->getMorphManager()->removeMorph($online);
+	}*/
 	
 	
 }
