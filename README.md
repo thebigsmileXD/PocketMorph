@@ -12,7 +12,9 @@ Commands:
 
 - /morph list: Shows a list of available mobs you can transform into
 
-- /morph remove: Removes your current morph, and turns you back to human
+- /morph remove: Removes your current morph, and turns you back to human 
+
+- /morph removeall: Removes all current morphs, and turns all morphed players back to human
 
 Permissions:
 - morph.command: Allows using all PocketMorph commands
