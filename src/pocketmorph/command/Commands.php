@@ -65,6 +65,14 @@ class Commands {
 							}
 						}
 						
+						if(strtolower($args[0]) == "removeall") {
+							$all = $this->getServer()->getOnlinePlayers();
+							if($this->getPlugin()->getMorphManager()->isMorphed($all)) {
+								$this->getPlugin()->getMorphManager()->removeMorph($all);
+								$sender->sendMessage(TextFormat::GREEN . "All online morphed players with have been unset from the morph manager");
+							}
+						}
+						
 						if(strtolower($args[0]) == "help") {
 							$sender->sendMessage(TextFormat::GREEN . "PocketMorph help\n- /morph help\n- /morph remove\n- /morph <entity>\n- /morph list");
 						}
