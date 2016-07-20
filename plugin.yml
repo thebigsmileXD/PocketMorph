@@ -1,9 +1,13 @@
 name: PocketMorph
 author: HotshotHD
-version: 1.0.0
+version: 1.1.0
 description: Morph into your favourite mobs!
 main: pocketmorph\PocketMorph
-api: 2.0.0
+api:
+- 1.14.0
+- 1.13.0
+- 2.0.0
+- 1.0.0
 commands:
   morph:
     description: Transform into a mob
